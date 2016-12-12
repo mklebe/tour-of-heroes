@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Hero } from './hero';
+import { HeroService } from './services/hero.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'mk-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ HeroService ]
 })
-export class AppComponent {
-  title = 'app works!';
+
+export class AppComponent implements OnInit{
+  ngOnInit(): void {}
+
+  title = 'Tour of Heroes';
 }
