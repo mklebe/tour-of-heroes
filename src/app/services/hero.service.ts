@@ -34,7 +34,7 @@ export class HeroService {
   }
 
   getHero( id: number ): Promise <Hero> {
-    const url = '${this.heroesUrl}/${id}';
+    const url = `${this.heroesUrl}/${id}`;
 
     return this.http.get(url)
           .toPromise()
@@ -43,7 +43,7 @@ export class HeroService {
   }
 
   update( hero: Hero ): Promise <Hero> {
-    const url = '${this.heroesUrl}/${hero.id}';
+    const url = `${this.heroesUrl}/${hero.id}`;
 
     return this.http
           .put(url, JSON.stringify( hero ), {headers: this.headers})
@@ -59,5 +59,15 @@ export class HeroService {
           .toPromise()
           .then(res => res.json().data )
           .catch(this.handleError);
+  }
+
+  delete( id: number ): Promise <Hero> {
+    const url = `${this.heroesUrl}/${id}`;
+
+    return this.http.delete(url)
+          .toPromise()
+          .then( () => null )
+          .catch(this.handleError);
+
   }
 }
