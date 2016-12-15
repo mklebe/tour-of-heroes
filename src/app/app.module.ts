@@ -19,6 +19,7 @@ import { HeroService } from './services/hero.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HeroBannerComponent } from './hero-banner/hero-banner.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    HeroBannerComponent
   ],
   imports: [
     BrowserModule,

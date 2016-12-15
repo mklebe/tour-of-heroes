@@ -11,8 +11,9 @@ import { HeroService } from '../services/hero.service';
 export class DashboardComponent implements OnInit {
 
   heroes: Hero[] = [];
+  title = "My Dashboard";
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {}
 
   ngOnInit() {
     this.heroService.getHeroes()
