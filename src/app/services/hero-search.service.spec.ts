@@ -10,7 +10,7 @@ describe('Service: HeroSearch', () => {
     });
   });
 
-  it('should ...', inject([HeroSearchService], (service: HeroSearchService) => {
+  xit('should ...', inject([HeroSearchService], (service: HeroSearchService) => {
     expect(service).toBeTruthy();
   }));
 });
